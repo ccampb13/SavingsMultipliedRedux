@@ -1,12 +1,25 @@
 .left-column
-  %h2 We're making one aspect of life easier for parents of multiples:
+  %h3 We're making one aspect of life easier for parents of multiples:
 
-  %h3 buying and selling gently used sets of clothes!
+  = image_tag "homepage/owl_44_44.png", :class => "owl"
+  %h4 buying and selling gently used clothes!
 
-  = link_to "Shop Now!", auctions_path, class: "button primary"
+  #dotted-line
+    = link_to "Shop Now!", auctions_path, class: "button primary"
+
+  #tree= image_tag "homepage/tree.png"
 
 .right-column
   #child_images
-    = image_tag "children/twins.jpg"
-    = image_tag "children/triplets.jpg"
-    = image_tag "children/quads.jpg"
+    = image_tag "children/twins.jpg", :class => "child-photos"
+    = image_tag "children/triplets.jpg", :class => "child-photos"
+    = image_tag "children/quads.jpg", :class => "child-photos"
+
+
+#content.social.full-column
+  #dotted-line
+  %ul
+    %li= image_tag "homepage/facebook_callout.png"
+    %li= image_tag "homepage/twitter_callout.png"
+    %li= image_tag "homepage/message_board_callout.png"
+    %li= image_tag "homepage/special_offers_callout.png"

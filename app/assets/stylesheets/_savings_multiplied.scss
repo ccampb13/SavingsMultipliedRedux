@@ -1,12 +1,103 @@
-header, footer {
+$lightBlue: #D5F1F0;
+$lightPink: #F5CBD3;
+$darkBlue: #75CBD2;
+
+header, footer,  {
   ul {
+    margin-top: 60px;
+    text-align: center;
     li {
       display: inline;
+      margin: 20px;
     }
   }
 }
 
-#content {
+
+img.logo {
+  margin-top: -35px;
+}
+
+img.child-photos {
+  margin-bottom: 15px;
+}
+
+img.owl {
+  display: inline;
+}
+
+
+#devise_navigation li {
+  display: inline;
+  margin: 20px;
+  float: right;
+  color: $darkBlue;
+}
+
+header {
+  background-color: #fff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  .right-column h5 {
+    color: $darkBlue;
+  }
+}
+
+#page_navigation {
+  width: 100%;
+  li {
+    border-radius: 20px;
+    margin: 2px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+  }
+  li:nth-child(1) {
+    background-color: $darkBlue;
+  }
+  li:nth-child(2) {
+    background-color: #8FB84D;
+  }
+  li:nth-child(3) {
+    background-color: #5B1A78;
+  }
+  li:nth-child(4) {
+    background-color: #E6208A;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+#main_navigation {
+  overflow: hidden;
+  background-color: $lightPink;
+  text-align: center;
+  margin-bottom: 0px;
+  height: 50px;
+  line-height: 50px;
+
+  li {
+    width: 100%;
+    max-width: 100%;
+    display: inline;
+    margin: 30px;
+
+    a {
+      color: #6E1849;
+      font-weight: bold;
+      margin: 20px;
+    }
+  }
+}
+
+
+.right-column h5 {
+  color: $lightBlue;
+}
+
+#content, #devise_navigation, header, footer {
   @include grid-row();
 
   $left-column-size: 6;
@@ -17,7 +108,68 @@ header, footer {
   .right-column {
     @include grid-column($right-column-size);
   }
+
+  .full-column {
+    @include grid-column(12);
+  }
 }
+
+.full-width-header {
+  width: 100%;
+  max-width: 100%;
+  background-color: $lightBlue;
+}
+
+.full-width-footer {
+  width: 100%;
+  max-width: 100%;
+  background-color: $darkBlue;
+  color: $lightBlue;
+  a {
+    color: $lightBlue;
+  }
+}
+
+.full-width-content {
+  width: 100%;
+  max-width: 100%;
+  background-color: $darkBlue;
+}
+
+.button {
+  background-color: #E6208A;
+  border: #E6208A;
+  border-radius: 20px;
+  float: right;
+}
+
+#tree {
+  float:right;
+  clear: both;
+  margin-top: 120px;
+}
+
+#dotted-line {
+  background-image: asset-data-url('homepage/dotted_line_44_36.png');
+  background-repeat:repeat-x;
+  height: 30px;
+}
+.social li {
+  margin: 20px;
+  display: inline;
+}
+
+h3 {
+  color: #8DB639;
+}
+
+h4 {
+  color: $darkBlue;
+}
+
+
+
+/**********MEDIA QUERIES ************/
 
 $small-range: (0em, 30em); /* 0, 640px */
 $small-only: "#{$screen} and (max-width: 40em)" !default;
